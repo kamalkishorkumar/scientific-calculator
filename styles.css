@@ -1,0 +1,123 @@
+/* Body styling with background gradient and centered content */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2c3e50, #bdc3c7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ecf0f1;
+    animation: gradientBackground 6s infinite alternate;
+}
+
+/* Gradient animation for the background */
+@keyframes gradientBackground {
+    0% { background: linear-gradient(to bottom right, #2c3e50, #bdc3c7); }
+    50% { background: linear-gradient(to bottom right, #8e44ad, #3498db); }
+    100% { background: linear-gradient(to bottom right, #2ecc71, #f1c40f); }
+}
+
+/* Calculator styling */
+.calculator {
+    background: #34495e;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect for the calculator */
+.calculator:hover {
+    transform: scale(1.05);
+}
+
+/* Display input field styling */
+.display {
+    background: #2c3e50;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: right;
+    color: #ecf0f1;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+}
+
+/* Button styling */
+.button {
+    background: #1abc9c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    padding: 10px;
+    width: 22%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Button hover effect */
+.button:hover {
+    background: #16a085;
+    transform: translateY(-3px);
+}
+
+/* Operator button styling */
+.button.operator {
+    background: #e67e22;
+}
+
+/* Operator button hover effect */
+.button.operator:hover {
+    background: #d35400;
+}
+
+/* Clear button styling */
+.button.clear {
+    background: #e74c3c;
+}
+
+/* Clear button hover effect */
+.button.clear:hover {
+    background: #c0392b;
+}
+
+/* Equals button styling */
+.button.equals {
+    background: #3498db;
+    width: 48%;
+}
+
+/* Equals button hover effect */
+.button.equals:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Row styling for buttons */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 500px) {
+    .button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .display {
+        font-size: 1.2em;
+    }
+}
